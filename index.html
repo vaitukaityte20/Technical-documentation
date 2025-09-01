@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ReactJS Technical Documentation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+<body>
+  <header class="page-title">ReactJS Technical Documentation</header>
+  <nav id="navbar">
+      <header id="nav-header">ReactJS and ES6</header>
+      <a class="nav-link" href="#introduction">Introduction</a>
+      <a class="nav-link" href="#prerequisites">Prerequisites</a>
+      <a class="nav-link" href="#getting_started">Getting Started</a>
+      <a class="nav-link" href="#jsx">JSX</a>
+      <a class="nav-link" href="#conclusion">Conclusion</a>
+    </nav>
+  <main id="main-doc">
+    
+    <section class="main-section" id="introduction">
+      <header>Introduction</header>
+      <p>ReactJS is a JavaScript library that is used to build user interfaces(UI). It was created and open sourced by Facebook, releasing to the public on May of 2013. It opened to much skepticism but has since become one of the most widely used and popular JavaScript frontend libraries.</p>
+      <p>ReactJS is known for its component-based approach for creating UI, with these component's reusability making it ideal for scaling large, single page web applications. At a glance, the benefits of React are:</p>
+      <ul>
+        <li>Reusable Components: build a component and use it anywhere that it is needed on your application.</li>
+        <li>One-direction data flow: ReactJS uses downward data binding to ensure that changes of child structures don’t affect their parents, thus making code stable.</li>
+        <li>Virtual DOM: an abstract copy of the actual DOM which is constantly checked for any differences and only updates that portion of the interface and no other parts. Thus, REACT-ing to the DOM changes and increasing your apps speed.</li>
+      </ul>
+    </section>
+    <section class="main-section" id="prerequisites">
+      <header>Prerequisites</header>
+      <p>This guide assumes you have the following basic background:</p>
+      <ul>
+        <li>Knowledge of HTML (HyperText Markup Language) and the DOM.</li>
+        <li>Programming and JavaScript fundamentals (for/while loops, variables, conditionals, Javascript quirks such as "this").</li>
+        <li>ES6 (we will go over this topic in this guide, however).</li>
+      </ul>
+    </section>
+    <section class="main-section" id="getting_started">
+      <header>Getting Started</header>
+      <p>For a quick and easy no-manual-config route to starting a React project, <a href="https://github.com/facebook/create-react-app">Create React App</a> is a beginner friendly environment for developing single-page applications.</p>
+      <p>First, make sure you have the latest versions of Node and NPM installed. Then, on your terminal run:</p>
+      <pre><code>
+        npx create-react-app my-app 
+        cd my-app 
+        npm start 
+      </code></pre>
+      <p>This command creates a folder with React and all configurations installed and prepared for you, with Babel and webpack working under the hood. Once you are finished working on your application, simple run:</p>
+      <code>npm run build</code>
+    <p>This command will create an optimized build of your app in the build folder for you to deploy.</p>
+    </section>
+    <section class="main-section" id="jsx">
+      <header>JSX</header>
+      <p>JSX, JavaScript eXtension, is Javascript that looks like HTML. It is not technically required to be used in React nor is it the only way to write your transpiled HTML output, but it does provide and elegant and more readable solution.</p>
+      <p>An example of JSX in React is shown below, creating a simple React component that renders "Hello World":</p> 
+      <pre><code>
+      class HelloWorld extends React.Component { 
+        render() {  
+          return( 
+            &lt;h1&gt;Hello World&lt;/h1&gt; 
+          );
+        }       
+      }  
+       </code></pre>
+      <p>The above code renders to the DOM "Hello World" as an h1 tag. You probably didn't need me to tell you that, however, as the JSX makes that apparent.</p>
+      <p>Is it just HTML then? Not exactly.</p>
+      <p>JSX, as mentioned earlier, is Javascript that looks like HTML. So, when the above code is ran, it is translated into regular JavaScript and looks like this.</p>
+      <pre><code>
+class HelloWorld extends React Component {
+  render() {
+    return (
+      React.createElement(
+        'h1',
+        {className: 'large'},
+        'Hello World'
+      )
+    );
+  }
+}  
+</code></pre>
+<p>The truth reveals itself! JSX turns into a React element which is a virtual representation of the HTML elements this component outputs. This is where the Virtual DOM benefits kick in and any differences in the Virtual and Real DOM is checked. The DOM, then, only updates the portion of the interface that is different and no other parts.</p>
+<p>You can create React components without JSX like the example above if you choose, but JSX does make developing components a lot easier.</p>
+
+<p>There are a few things to think about when writing JSX in a React Component. The first of which is that React can only return and render one parent element. This means code like this:</p>
+<pre><code>
+class Example extends React.Component {
+  render() {
+    return (
+      &lt;h1&gt;Hello&lt;/h1&gt; 
+      &lt;h2&gt;World&lt;/h2&gt; 
+    );    
+  }
+} 
+</pre></code> 
+<p>Would be incorrect and result in an error. To fix this, all you need to do is wrap the JSX in an enclosing, parent tag, like so:</p>
+<pre><code>
+class Example extends React.Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;Hello&lt;/h1&gt; 
+        &lt;h2&gt;World&lt;/h2&gt; 
+      &lt;/div&gt; 
+    );    
+  }
+}  
+</pre></code>
+<p>Wrap it in a div or any other relevant tags.</p>
+    </section>
+    <section class="main-section" id="conclusion">
+      <header>Conclusion</header>
+      <p>Thank you so much for taking the time to go through this documentation and congrats if you made it this far! Hopefully, you could take something from this and if you have any suggestions for more content or spot any errors, feel free to email me at edgar.sanmartinjr@gmail.com<p>
+      <p>Some of my professional accounts you can follow me at include:</p>
+      <ul>
+        <li><a href="https://github.com/ej-sanmartin">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/edgar-jr-san-martin/">LinkedIn</a></li>
+
+    </section>
+  </main>
+  <footer></footer>
+</body>
+</html>
