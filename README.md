@@ -2,7 +2,12 @@
 
 A clean, static documentation page about ReactJS as an example, built with just HTML and CSS. The project was inspired by freeCodeCamp.
 
-## 🛠 Features
+## Live Preview
+
+You can view the live demo here: [**Technical documentation page**](https://vaitukaityte20.github.io/Technical-documentation)  
+_Replace with your actual URL once deployed._
+
+## Features
 - Fixed sidebar layout
 - Code example blocks
 - Semantic structure
@@ -10,7 +15,7 @@ A clean, static documentation page about ReactJS as an example, built with just 
 - Unordered lists
 - Header using flex layout
 
-## 📚 Source
+## Source
 This project uses example content based on my [CodePen](https://codepen.io/ej-sanmartin/pen/eLgQpQ) project.
 
 ## 🧱 Tech Stack
