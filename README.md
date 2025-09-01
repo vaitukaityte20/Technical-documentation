@@ -4,7 +4,7 @@ A clean, static documentation page about ReactJS as an example, built with just 
 
 ## Live Preview
 
-You can view the live demo here: [**Technical documentation page**](https://vaitukaityte20.github.io/Technical-documentation)  
+You can view the live demo here: [Live DEMO](https://vaitukaityte20.github.io/Technical-documentation)  
 _Replace with your actual URL once deployed._
 
 ## Features
